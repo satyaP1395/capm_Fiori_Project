@@ -33,8 +33,10 @@ service CatalogService @(path:'CatalogService' , requires: 'authenticated-user')
         @Common.SideEffects : {
                 TargetProperties : ['_anubhav/GROSS_AMOUNT']
             } 
-        action boost();
+            // bound odata sctions :
+        action boost(); 
     };
+    // bound odata functions :
      function largestOrder() returns POs;
     entity ProductSet as projection on master.product
 
